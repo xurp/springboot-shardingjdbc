@@ -19,7 +19,7 @@ public class DataSourceConfig {
 
     @Bean(name = "primaryDataSource")
     @Primary
-    // 配置文件中前缀
+    // 在application.properties里面
     @ConfigurationProperties(prefix = "spring.datasource.primary")
     public DataSource primaryDataSource() {
         return DataSourceBuilder.create().build();
